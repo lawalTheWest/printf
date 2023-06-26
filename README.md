@@ -1,7 +1,7 @@
 <h1> printf in C: A Powerful Output Formatting Toolc</h1>
 
 <h6>
-Isa Suleiman Isa
+Isa Suleiman Isa </br>
 Lawal Tajudeen Ogunsola
 </h6>
 
