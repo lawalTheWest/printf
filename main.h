@@ -25,10 +25,10 @@ int handle_Hex_Specifier(va_list args);
 int handle_other_specifiers(char specifier, va_list args);
 
 /* the address specifier */
-int stringLength(const char* str);
-void writeString(const char* str);
+int stringLength(const char *str);
+void writeString(const char *str);
 void writeChar(char c);
 void writeHex(unsigned long value);
-void handle_memory_address(void* ptr);
+void handle_memory_address(void *ptr);
 
 #endif
