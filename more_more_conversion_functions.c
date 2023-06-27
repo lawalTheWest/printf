@@ -7,13 +7,13 @@
  * @str: va_list object
  * Return: (lenght)
 */
-int stringLength(const char* str)
+int stringLength(const char *str)
 {
 	int length = 0;
 
 	while (str[length] != '\0')
 		length++; /* end while */
-	return length;
+	return (length);
 } /* end function */
 
 /**
@@ -21,7 +21,7 @@ int stringLength(const char* str)
  * @str: va_list object
  *
 */
-void writeString(const char* str)
+void writeString(const char *str)
 {
 	int length = stringLength(str);
 
@@ -56,6 +56,7 @@ void writeHex(unsigned long value)
 	while (value > 0 && index < 16)
 	{
 		int digit = value % 16;
+
 		buffer[index++] = hexDigits[digit];
 		value /= 16;
 	} /* end while */
@@ -69,7 +70,7 @@ void writeHex(unsigned long value)
  * handle_memory_address - handles the 'p' specifier
  * @ptr: pointer
 */
-void handle_memory_address(void* ptr)
+void handle_memory_address(void *ptr)
 {
 	unsigned long address = (unsigned long)ptr;
 
