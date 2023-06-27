@@ -1,7 +1,7 @@
 #ifndef PRINTF_H
 #define PRINTF_H
 #include <stdarg.h>
-
+#include <stdio.h>
 
 int _printf(const char *format, ...);
 int _strlen(const char *s);
@@ -23,5 +23,12 @@ int handle_octal_specifier(va_list args);
 int handle_hex_specifier(va_list args);
 int handle_Hex_Specifier(va_list args);
 int handle_other_specifiers(char specifier, va_list args);
+
+/* the address specifier */
+int stringLength(const char* str);
+void writeString(const char* str);
+void writeChar(char c);
+void writeHex(unsigned long value);
+void handle_memory_address(void* ptr);
 
 #endif
