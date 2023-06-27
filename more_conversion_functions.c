@@ -12,7 +12,7 @@ int handle_binary_specifier(va_list args)
 	unsigned int mybinary;
 	int len;
 
-	mybinary = vai_arg(args, unsigned int);
+	mybinary = va_arg(args, unsigned int);
 	len = _btoa(mybinary);
 	return (len);
 } /* end function */
