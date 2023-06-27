@@ -11,6 +11,8 @@ int _printf(const char *format, ...)
 	int len;
 	va_list mylist;
 
+	if (format == NULL)
+		return (-1);
 	va_start(mylist, format);
 	len = handle_conversion_specifier(format, mylist);
 	va_end(mylist);
