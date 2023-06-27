@@ -35,10 +35,17 @@ int _itoa(int num)
 		is_negative = 1;
 		num = -num;
 	}
-	do {
+	while (num > 0)
+	{
+                buffer[length++] = '0' + (num % 10);
+                num /= 10;
+	} /* end while */
+	/*
+	 * do {
 		buffer[length++] = '0' + (num % 10);
 		num /= 10;
 	} while (num > 0);
+	*/
 	if (is_negative == 1)
 	{
 		buffer[length++] = '-';
