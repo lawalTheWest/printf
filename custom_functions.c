@@ -13,7 +13,7 @@ int _strlen(const char *s)
 	while (s[i] != '\0')
 	{
 		i++;
-	}
+	} /* end while */
 	return (i);
 } /* end of function */
 
@@ -34,28 +34,21 @@ int _itoa(int num)
 	{
 		is_negative = 1;
 		num = -num;
-	}
-	while (num > 0)
-	{
+	} /* end if */
+	do {
 		buffer[length++] = '0' + (num % 10);
 		num /= 10;
-	} /* end while */
-	/*
-	 * do {
-		buffer[length++] = '0' + (num % 10);
-		num /= 10;
-	} while (num > 0);
-	*/
+	} while (num > 0); /* end while */
 	if (is_negative == 1)
 	{
 		buffer[length++] = '-';
-	}
+	} /* end if */
 	for (i = 0, j = length - 1; i < j; i++, j--)
 	{
 		hold = buffer[i];
 		buffer[i] = buffer[j];
 		buffer[j] = hold;
-	}
+	} /* end for */
 	write(1, buffer, length);
 	return (length);
 } /* End of function */
