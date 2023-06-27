@@ -37,8 +37,8 @@ int _itoa(int num)
 	}
 	while (num > 0)
 	{
-                buffer[length++] = '0' + (num % 10);
-                num /= 10;
+		buffer[length++] = '0' + (num % 10);
+		num /= 10;
 	} /* end while */
 	/*
 	 * do {
