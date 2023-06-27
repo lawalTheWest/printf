@@ -11,9 +11,16 @@ int handle_char_specifier(va_list args)
 {
 	char ch;
 
-	ch = va_arg(args, int);
-	write(1, &ch, 1);
-	return (1);
+	if (args != NULL)
+	{
+		ch = va_arg(args, int);
+		write(1, &ch, 1);
+		return (1);
+	} /* end if */
+	else
+	{
+		return (-1);
+	} /* end else */
 } /* End function */
 
 /**
