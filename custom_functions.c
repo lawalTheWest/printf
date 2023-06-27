@@ -65,11 +65,10 @@ int _btoa(unsigned int num)
 	int i, j;
 	char hold;
 
-	while (num > 0)
-	{
+	do {
 		buffer[length++] = '0' + (num % 2);
 		num /= 2;
-	}
+	} while (num > 0);
 	for (i = 0, j = length - 1; i < j; i++, j--)
 	{
 		hold = buffer[i];
