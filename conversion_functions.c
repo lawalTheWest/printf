@@ -26,10 +26,17 @@ int handle_string_specifier(va_list args)
 	char *mystring;
 	int len;
 
-	mystring = va_arg(args, char *);
-	len = _strlen(mystring);
-	write(1, mystring, len);
-	return (len);
+	if (args != NULL)
+	{
+		mystring = va_arg(args, char *);
+		len = _strlen(mystring);
+		write(1, mystring, len);
+		return (len);
+	} /* end if */
+	else
+	{
+		return (-1);
+	} /* end else */
 } /* End function */
 
 /**
