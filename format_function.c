@@ -59,6 +59,13 @@ int handle_other_specifiers(char specifier, va_list args)
 		return ((handle_hex_specifier(args)));
 	else if (specifier == 'X')
 		return (handle_Hex_Specifier(args));
+	else if (specifier == 'p') /* handles address */
+	{
+		void *ptr = va_arg(args, void*);
+
+		handle_memory_address(ptr);
+	} /* end else */
 	else
 		return (0);
+	return (0);
 } /* end function */
